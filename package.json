@@ -1,0 +1,13 @@
+{
+  "name": "acos-logging-keygenerator",
+  "version": "0.1.0",
+  "description": "A tool for generating public and secret keys for logging.",
+  "main": "index.js",
+  "dependencies": {
+    "nunjucks": "^1.2.0",
+  },
+  "scripts": {
+  },
+  "author": "Teemu Sirkiä",
+  "license": "MIT"
+}
