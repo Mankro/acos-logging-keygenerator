@@ -11,7 +11,8 @@ keyGenerator.register = function(handlers, app, config) {
   handlers.tools['logging-keygenerator'] = keyGenerator;
 
   // Give a warning if the logging key is not specified in the config file.
-  // The key for the value in the config file is 'logKey'.
+  // The key for the value in the config file is 'logKey', for example:
+  //   logKey: 'abcdefabcdef'
   // If the key is not found, a default value 'acos' will be used.
   if (!config.logKey) {
     console.log('[Logging key generator] Warning: Logging key is not specified in the config file.');
