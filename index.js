@@ -26,10 +26,12 @@ keyGenerator.register = function(handlers, app, config) {
         res.sendStatus(500);
       } else {
         var publicHash = crypto.createHash('sha1').update(bytes);
-        var secretHash = crypto.createHash('sha1').update(bytes + (config.logKey || 'acos'));
+        var publicHex = publicHash.digest('hex');
+        var secretHash = crypto.createHash('sha1').update(publicHex + (config.logKey || 'acos'));
+        var secretHex = secretHash.digest('hex');
         var result = nunjucks.render('template.html', {
-          publicKey: publicHash.digest('hex'),
-          secretKey: secretHash.digest('hex'),
+          publicKey: publicHex,
+          secretKey: secretHex,
           host: config.serverAddress
         });
 
