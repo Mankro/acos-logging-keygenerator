@@ -4,9 +4,13 @@
   "description": "A tool for generating public and secret keys for logging.",
   "main": "index.js",
   "dependencies": {
-    "nunjucks": "^1.2.0"
+    "nunjucks": "^3.0.1"
   },
   "scripts": {},
   "author": "Teemu Sirkiä",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acos-server/acos-logging-keygenerator.git"
+  }
 }
