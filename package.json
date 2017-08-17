@@ -1,6 +1,6 @@
 {
   "name": "acos-logging-keygenerator",
-  "version": "0.2.0",
+  "version": "0.1.2",
   "description": "A tool for generating public and secret keys for logging.",
   "main": "index.js",
   "dependencies": {
@@ -12,5 +12,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/acos-server/acos-logging-keygenerator.git"
-  },
+  }
 }
