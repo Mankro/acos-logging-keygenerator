@@ -2,7 +2,7 @@ var fs = require('fs');
 var crypto = require('crypto');
 var nunjucks = require('nunjucks');
 
-nunjucks.configure(__dirname);
+var nj = nunjucks.configure(__dirname);
 
 var keyGenerator = function() {};
 
@@ -29,7 +29,7 @@ keyGenerator.register = function(handlers, app, config) {
         var publicHex = publicHash.digest('hex');
         var secretHash = crypto.createHash('sha1').update(publicHex + (config.logKey || 'acos'));
         var secretHex = secretHash.digest('hex');
-        var result = nunjucks.render('template.html', {
+        var result = nj.render('template.html', {
           publicKey: publicHex,
           secretKey: secretHex,
           host: config.serverAddress
